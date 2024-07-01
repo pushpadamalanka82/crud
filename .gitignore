@@ -1,0 +1,17 @@
+node_modules/
+
+bin/
+dist/
+
+KData/
+publicDir/
+
+src/FrontEnd/AllTables
+src/FrontEnd/FirstTable
+src/FrontEnd/assets/static/DataSchema
+
+.env
+
+.vscode
+
+.log
