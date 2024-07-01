@@ -1,0 +1,77 @@
+{
+    "ItemCode": {
+      "type": "INTEGER",
+      "HtmlTags": {
+        "Show": {
+          "title": "Item Code"
+        }
+      }
+    },
+    "RefPK": {
+      "type": "INTEGER",
+      "HtmlTags": {
+        "Show": {
+          "title": "RefPK"
+        }
+      }
+       
+     },
+    "id": {
+      "type": "INTEGER",
+      "HtmlTags": {
+        "Show": {
+          "title": "id"
+        }
+      }
+     },
+     
+     "ItemName": {
+       "type": "STRING",
+       "HtmlTags": {
+        "Show": {
+          "title": "ItemName"
+        }
+      }
+     },
+     "BatchRefPk": {
+       "type": "STRING",
+       "HtmlTags": {
+        "Show": {
+          "title": "BatchRefPK"
+        }
+      }
+     },
+     "BatchNumber": {
+       "type": "STRING",
+       "HtmlTags": {
+        "Show": {
+          "title": "BatchNumber"
+        }
+      }
+     },
+     "sno": {
+       "type": "INTEGER",
+       "HtmlTags": {
+        "Show": {
+          "title": "sno"
+        }
+      }
+     },
+     "Qty": {
+       "type": "INTEGER",
+       "HtmlTags": {
+        "Show": {
+          "title": "Qty"
+        }
+      }
+     },
+     "Amount": {
+       "type": "INTEGER",
+       "HtmlTags": {
+        "Show": {
+          "title": "Amount"
+        }
+      }
+     }
+    
+  }
