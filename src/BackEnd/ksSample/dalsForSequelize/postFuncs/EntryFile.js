@@ -18,6 +18,10 @@ let PostUploadFunc = ({ LocalBodyAsModal }) => {
     return bulkInsertAsIs({ LocalBodyAsModal });
 };
 
+let MultiInsertWithCheckFunc = async (inPostBody) => {
+    return await bulkInsertAsIs(inPostBody);
+};
+
 let PostUploadFromModalFunc = async (inPostBody) => {
     return await StartFuncImportToFile(inPostBody);
 };
@@ -28,5 +32,6 @@ let PostGetSelectColumnsFunc = ({ LocalBodyAsModal }) => {
 
 export {
     PostFunc, PostFromModalFunc,
-    PostUploadFunc, PostGetSelectColumnsFunc, PostUploadFromModalFunc
+    PostUploadFunc, PostGetSelectColumnsFunc, PostUploadFromModalFunc,
+    MultiInsertWithCheckFunc
 };

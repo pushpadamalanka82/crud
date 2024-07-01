@@ -12,7 +12,8 @@ import {
 
 import {
     PostFunc as PostFuncDalsForSequelize,
-    PostUploadFromModalFunc as PostUploadFromModalFuncDalsForSequelize
+    PostUploadFromModalFunc as PostUploadFromModalFuncDalsForSequelize,
+    MultiInsertWithCheckFunc as MultiInsertWithCheckFuncDalsForSequelize
 } from '../../dalsForSequelize/postFuncs/EntryFile.js';
 import {
     PostFunc as PostFuncDalsForMongoDB
@@ -72,7 +73,7 @@ let PostUploadFromModalFunc = async ({ inArrayFromRequest }) => {
 
 let MultiInsertWithCheckFunc = async ({ inArrayFromRequest }) => {
     if (ConfigJson.isSequelize) {
-        return await PostUploadFromModalFuncDalsForSequelize(inArrayFromRequest);
+        return await MultiInsertWithCheckFuncDalsForSequelize(inArrayFromRequest);
     };
 
     return MultiInsertWithCheckFuncDal({ inArrayFromRequest });
@@ -95,5 +96,5 @@ export {
     PostUploadFunc, PostGetSelectColumnsFunc,
     PostUploadFromModalFunc, PostFilterFunc,
     PostWithKeysCheckFunc, PostFuncGenUuId,
-    PostWithCheckAndGenPkFunc,MultiInsertWithCheckFunc,PostCustomPkFunc
+    PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc, PostCustomPkFunc
 };

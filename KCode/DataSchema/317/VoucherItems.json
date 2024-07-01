@@ -1,98 +1,81 @@
 {
-    "ItemCode": {
-      "type": "INTEGER",
-      "HtmlTags": {
-        "Show": {
-          "title": "Item Code",
-          "Create": {
-            "title": "ItemCode"
-          }
+  "ItemCode": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Code",
+        "Create": {
+          "title": "ItemCode"
         }
       }
-    },
-    "RefPK": {
-      "type": "INTEGER",
-      "HtmlTags": {
-        "Show": {
-          "title": "RefPK",
-          "Create": {
-            "title": "RefPK"
-          }
+    }
+  },
+  "RefPK": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "RefPK",
+        "Create": {
+          "title": "RefPK"
         }
       }
-       
-     },
-    "id": {
-      "type": "INTEGER",
-      "HtmlTags": {
-        "Show": {
-          "title": "id",
-          "Create": {
-            "title": "id"
+    }
+  },
+  "ItemName": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "ItemName",
+        "Create": {
+          "title": "ItemName"
         }
       }
-     },
-     
-     "ItemName": {
-       "type": "STRING",
-       "HtmlTags": {
-        "Show": {
-          "title": "ItemName",
-          "Create": {
-            "title": "ItemName"
-          }
-          
+    }
+  },
+  "BatchRefPk": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "BatchRefPK",
+        "Create": {
+          "title": "BatchRefPK"
         }
       }
-     },
-     "BatchRefPk": {
-       "type": "STRING",
-       "HtmlTags": {
-        "Show": {
-          "title": "BatchRefPK",
-          "Create": {
-            "title": "BatchRefPK"
-          }
+    }
+  },
+  "BatchNumber": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "BatchNumber",
+        "Create": {
+          "title": "BatchNumber"
         }
       }
-     },
-     "BatchNumber": {
-       "type": "STRING",
-       "HtmlTags": {
-        "Show": {
-          "title": "BatchNumber",
-          "Create": {
-            "title": "BatchNumber"
-          }
-        }
+    }
+  },
+  "sno": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "sno"
       }
-     },
-     "sno": {
-       "type": "INTEGER",
-       "HtmlTags": {
-        "Show": {
-          "title": "sno"
-        }
+    }
+  },
+  "Qty": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "Qty"
       }
-     },
-     "Qty": {
-       "type": "INTEGER",
-       "HtmlTags": {
-        "Show": {
-          "title": "Qty"
-        }
+    }
+  },
+  "Amount": {
+    "type": "INTEGER",
+    "HtmlTags": {
+      "Show": {
+        "title": "Amount"
       }
-     },
-     "Amount": {
-       "type": "INTEGER",
-       "HtmlTags": {
-        "Show": {
-          "title": "Amount"
-        }
-      }
-     }
-    
+    }
   }
-
-
 }
