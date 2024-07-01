@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Menu",
+    "isTitle": true
+  },
+  {
+    "name": "Dashboard",
+    "url": "index.html",
+    "icon": "grid-fill"
+  },
+  {
+    "name": "FirstTable",
+    "url": "../bin/316/FirstTable/ShowSimple.html",
+    "icon": "grid-fill"
+  },
+  {
+    "name": "AllTables",
+    "url": "../bin/316/AllTables/CustomersShowSimple.html",
+    "icon": "grid-fill"
+  }
+]
