@@ -1,5 +1,6 @@
 import { StartFunc as StartFuncReadFileFromModal } from '../../kLowDb/ReadFileList/readFileFromModal.js';
 
+import { StartFunc as bulkInsertAsIs } from '../../kSequelize/WriteToFile/bulkInsertAsIs.js';
 
 import { StartFunc as StartFuncImportToFile } from '../../kSequelize/WriteFileList/ImportToFile.js';
 import { StartFunc as StartFuncInsertRow } from "../../kSequelize/WriteToFile/InsertRow.js";
@@ -14,7 +15,7 @@ let PostFromModalFunc = ({ LocalBodyAsModal }) => {
 };
 
 let PostUploadFunc = ({ LocalBodyAsModal }) => {
-    return StartFuncImportToFile({ LocalBodyAsModal });
+    return bulkInsertAsIs({ LocalBodyAsModal });
 };
 
 let PostUploadFromModalFunc = async (inPostBody) => {

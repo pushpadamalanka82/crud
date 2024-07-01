@@ -72,7 +72,7 @@ let PostUploadFromModalFunc = async ({ inArrayFromRequest }) => {
 
 let MultiInsertWithCheckFunc = async ({ inArrayFromRequest }) => {
     if (ConfigJson.isSequelize) {
-        return await PostUploadFromModalFuncDalsForSequelize(inPostBody);
+        return await PostUploadFromModalFuncDalsForSequelize(inArrayFromRequest);
     };
 
     return MultiInsertWithCheckFuncDal({ inArrayFromRequest });

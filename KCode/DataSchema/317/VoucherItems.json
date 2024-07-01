@@ -1,77 +1,71 @@
 {
     "ItemCode": {
-      "type": "INTEGER",
-      "HtmlTags": {
-        "Show": {
-          "title": "Item Code"
+        "type": "INTEGER",
+        "HtmlTags": {
+            "Show": {
+                "title": "Item Code"
+            }
         }
-      }
     },
     "RefPK": {
-      "type": "INTEGER",
-      "HtmlTags": {
-        "Show": {
-          "title": "RefPK"
+        "type": "INTEGER",
+        "allowNull": false,
+        "references": {
+            "model": "VoucherHeads",
+            "key": "id"
+          },
+        "HtmlTags": {
+            "Show": {
+                "title": "RefPK"
+            }
         }
-      }
-       
-     },
-    "id": {
-      "type": "INTEGER",
-      "HtmlTags": {
-        "Show": {
-          "title": "id"
+    },
+    "ItemName": {
+        "type": "STRING",
+        "HtmlTags": {
+            "Show": {
+                "title": "ItemName"
+            }
         }
-      }
-     },
-     
-     "ItemName": {
-       "type": "STRING",
-       "HtmlTags": {
-        "Show": {
-          "title": "ItemName"
+    },
+    "BatchRefPk": {
+        "type": "STRING",
+        "HtmlTags": {
+            "Show": {
+                "title": "BatchRefPK"
+            }
         }
-      }
-     },
-     "BatchRefPk": {
-       "type": "STRING",
-       "HtmlTags": {
-        "Show": {
-          "title": "BatchRefPK"
+    },
+    "BatchNumber": {
+        "type": "STRING",
+        "HtmlTags": {
+            "Show": {
+                "title": "BatchNumber"
+            }
         }
-      }
-     },
-     "BatchNumber": {
-       "type": "STRING",
-       "HtmlTags": {
-        "Show": {
-          "title": "BatchNumber"
+    },
+    "sno": {
+        "type": "INTEGER",
+        "HtmlTags": {
+            "Show": {
+                "title": "sno"
+            }
         }
-      }
-     },
-     "sno": {
-       "type": "INTEGER",
-       "HtmlTags": {
-        "Show": {
-          "title": "sno"
+    },
+    "Qty": {
+        "type": "INTEGER",
+        "HtmlTags": {
+            "Show": {
+                "title": "Qty"
+            }
         }
-      }
-     },
-     "Qty": {
-       "type": "INTEGER",
-       "HtmlTags": {
-        "Show": {
-          "title": "Qty"
+    },
+    "Amount": {
+        "type": "INTEGER",
+        "HtmlTags": {
+            "Show": {
+                "title": "Amount"
+            }
         }
-      }
-     },
-     "Amount": {
-       "type": "INTEGER",
-       "HtmlTags": {
-        "Show": {
-          "title": "Amount"
-        }
-      }
-     }
-    
-  }
+    }
+}
