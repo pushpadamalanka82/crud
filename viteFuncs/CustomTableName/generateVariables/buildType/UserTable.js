@@ -11,7 +11,7 @@ import _ from "lodash";
 const StartFunc = ({ mode, inFilesArray, inTableName }) => {
     const variables = {};
     let LocalFiles = inFilesArray;
-    let sidebarItems = sideBarSingleTable;
+    let sidebarItems = showTableNameInSideBar({ inTableName });
 
     Object.keys(LocalFiles).forEach((filename) => {
         if (filename.includes('layouts/FrontEnd')) filename = `layouts/FrontEnd/${filename}`
@@ -41,6 +41,13 @@ const StartFunc = ({ mode, inFilesArray, inTableName }) => {
     });
 
     return variables;
+};
+
+const showTableNameInSideBar = ({ inTableName }) => {
+    let sidebarItems = sideBarSingleTable;
+    sidebarItems[0].name = inTableName;
+
+    return sidebarItems;
 };
 
 export { StartFunc };
