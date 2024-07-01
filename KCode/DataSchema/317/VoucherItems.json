@@ -12,6 +12,11 @@
   },
   "RefPK": {
     "type": "INTEGER",
+    "allowNull": false,
+    "references": {
+      "model": "VoucherHeads",
+      "key": "id"
+    },
     "HtmlTags": {
       "Show": {
         "title": "RefPK",

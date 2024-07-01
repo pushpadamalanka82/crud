@@ -38,18 +38,17 @@
     <span class="visually-hidden">Loading...</span>
 </div>
 <div id="toolbar">
-    <button id="remove" class="btn btn-primary" disabled>
+    <button id="remove" class="btn btn-primary">
         <i class="fa fa-trash"></i> Submit
     </button>
 </div>
 <table id="table">
     <thead>
         <tr>
-            <th data-field="delivery" data-checkbox="true"></th>
+            <th data-field="#" data-formatter="jFGlobalSerialColumn">#</th>
             {% for ColumnName, ColumnInfo in columnData %}
             <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
             {% endfor %}
-
         </tr>
     </thead>
 </table>
@@ -57,14 +56,9 @@
 
 {% block js %}
 <script>
-    var $table = $('#table')
-    var $remove = $('#remove')
-
-    $(function () {
-        $table.on('check.bs.table uncheck.bs.table check-all.bs.table uncheck-all.bs.table', function () {
-            $remove.prop('disabled', !$table.bootstrapTable('getSelections').length)
-        })
-    })
+    function jFGlobalSerialColumn(value, row, index) {
+        return index + 1;
+    };
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

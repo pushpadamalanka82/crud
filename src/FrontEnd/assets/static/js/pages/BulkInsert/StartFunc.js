@@ -10,7 +10,6 @@ const StartFunc = () => {
 
         StartFuncShowOnDom().then(()=>{
             StartFuncAddListeners();
-
         });
     };
 };

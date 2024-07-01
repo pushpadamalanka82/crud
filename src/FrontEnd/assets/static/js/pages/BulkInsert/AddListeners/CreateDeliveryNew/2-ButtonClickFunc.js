@@ -5,8 +5,8 @@ import { StartFunc as StartFuncAfterFetch } from "./6-AfterFetch.js";
 
 let StartFunc = async () => {
   if (StartFuncCheckBeforeFetch()) {
-    let jVarLocalBodyData = StartFuncPreparePostData();
-
+    let jVarLocalBodyData = await StartFuncPreparePostData();
+    console.log("jVarLocalBodyData : ", jVarLocalBodyData);
     let response = await StartFuncFetchFunc({
       inBodyData: jVarLocalBodyData,
     });
