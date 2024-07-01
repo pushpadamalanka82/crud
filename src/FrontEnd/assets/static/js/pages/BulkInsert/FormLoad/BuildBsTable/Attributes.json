@@ -11,7 +11,9 @@
         "data-show-export": "true",
         "data-detail-formatter": "detailFormatter",
         "data-id-field": "pk",
-        "data-show-toggle": "true"
+        "data-show-toggle": "true",
+        "data-pagination": "true"
+
 
     }
 }
