@@ -5,8 +5,8 @@ import nunjucks from 'vite-plugin-nunjucks';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import ConfigJson from './bin/Config.json' with {type: 'json'};
 
-import { StartFunc as StartFuncGetFiles } from "./viteFuncs/FirstTable/getFiles.js";
-import { StartFunc as StartFuncGetVariables } from "./viteFuncs/FirstTable/getVariables.js";
+import { StartFunc as StartFuncGetFiles } from "./viteFuncs/CustomTableName/getFiles.js";
+import { StartFunc as StartFuncGetVariables } from "./viteFuncs/CustomTableName/getVariables.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,7 +16,7 @@ const SrcFolder = "src";
 // AllTables
 // FirstTable
 // <your table Name>
-const BuildType = "FirstTable";
+const BuildType = "VoucherItems";
 
 const FrontEndLastName = BuildType;
 
