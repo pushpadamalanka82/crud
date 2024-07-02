@@ -22,6 +22,14 @@
 
 <div class="row">
     <div class="col-6">
+        <div class="input-group mb-3">
+            <input type="file" class="form-control" id="formFile" placeholder="Recipient's username"
+                accept="application/json" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-primary" type="button" id="remove">Upload</button>
+        </div>
+    </div>
+
+    <!-- <div class="col-6">
         <div class="mb-3">
             <label for="formFile" class="form-label">Select your Json file here</label>
             <input class="form-control" type="file" id="formFile" accept="application/json">
@@ -31,17 +39,17 @@
         <button id="BuildTableId" class="btn btn-primary">
             <i class="fa fa-trash"></i> Show Table
         </button>
-    </div>
+    </div> -->
 </div>
 
 <div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
     <span class="visually-hidden">Loading...</span>
 </div>
-<div id="toolbar">
+<!-- <div id="toolbar">
     <button id="remove" class="btn btn-primary">
-        <i class="fa fa-trash"></i> Submit
+        <i class="fa fa-trash"></i> Upload
     </button>
-</div>
+</div> -->
 <table id="table">
     <thead>
         <tr>
