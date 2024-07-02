@@ -2,12 +2,12 @@
     {
         "name": "Customers",
         "isTitle": true,
-        "icon": "bi bi-people"
+        "icon": "bi bi-app"
     },
     {
         "name": "Create",
         "key": "Create",
-        "icon": "bi bi-people",
+        "icon": "bi bi-database-add",
         "children": [
             {
                 "name": "CreateSimple",
@@ -49,7 +49,7 @@
     {
         "name": "Show",
         "key": "Show",
-        "icon": "bi bi-people",
+        "icon": "bi bi-table",
         "children": [
             {
                 "name": "Show",
@@ -111,7 +111,7 @@
     {
         "name": "Alter",
         "key": "Alter",
-        "icon": "bi bi-people",
+        "icon": "bi bi-pencil-square",
         "children": [
             {
                 "name": "Alter",
@@ -138,7 +138,7 @@
     {
         "name": "Delete",
         "key": "Delete",
-        "icon": "bi bi-people",
+        "icon": "bi bi-trash",
         "children": [
             {
                 "name": "Delete",
