@@ -1,0 +1,1 @@
+select idno1, count(*), sum(noof), sum(amt) as ItemRowCount from bi_tab group by idno1
