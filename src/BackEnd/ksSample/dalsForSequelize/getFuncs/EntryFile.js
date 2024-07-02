@@ -6,6 +6,7 @@ import { StartFunc as findRow } from '../../kSequelize/PullData/findRow.js';
 import { StartFunc as StartFuncReadFileFromModal } from '../../kLowDb/ReadFileList/readFileFromModal.js';
 import { StartFunc as StartFunReadFileById } from '../../kLowDb/ReadFileList/readFileById.js';
 import { StartFunc as StartFuncGetTableSchema } from '../../kLowDb/GetTableSchema/GetColumns.js';
+import { StartFunc as StartFuncGetRawSql } from '../../kSequelize/PullData/GetRawSql.js';
 
 let GetFunc = () => {
     return StartFuncreadFile();
@@ -63,9 +64,15 @@ let GetColumnsSchemaFunc = async () => {
     return LocalFromLowDb;
 };
 
+let GetRawSqlFunc = async ({ inId }) => {
+    let LocalFromLowDb = await StartFuncGetRawSql({ inId });
+
+    return await LocalFromLowDb;
+};
+
 export {
     GetFunc, GetDataOnlyFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetFromModalUuidAndTSFunc,
     GetIdFunc, GetBodyCheckFunc, GetRowCountFunc,
-    GetColumnsSchemaFunc
+    GetColumnsSchemaFunc, GetRawSqlFunc
 };
