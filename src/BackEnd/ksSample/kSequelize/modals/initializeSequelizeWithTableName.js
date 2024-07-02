@@ -32,7 +32,10 @@ let StartFunc = async () => {
         }
     );
 
-    return await sequelize.define(path.parse(LocalTableName).name, LocalColumnsNeeded.fileData, { freezeTableName: true });
+    //return await sequelize.define(path.parse(LocalTableName).name, LocalColumnsNeeded.fileData, { freezeTableName: true });
+
+    return await sequelize.define(path.parse(LocalTableName).name,
+        LocalColumnsNeeded.fileData, { freezeTableName: true, timestamps: false });
 };
 
 export { StartFunc };

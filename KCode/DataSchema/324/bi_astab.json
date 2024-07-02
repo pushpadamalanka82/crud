@@ -1,0 +1,270 @@
+{
+    "bi_bok_cod": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false,
+        "HtmlTags": {
+            "Show": {
+                "title": "bi_bok_cod"
+            },
+            "Create": {
+                "title": "bi_bok_cod"
+            }
+        }
+    },
+    "bl_no": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "da": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "acc_cod": {
+        "type": "INTEGER",
+        "allowNull": false,
+        "primaryKey": false,
+        "unique": false,
+        "references": {
+            "model": "acc_cod_tab",
+            "key": "acc_cod"
+        }
+    },
+    "rec_amt": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "des1": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "acc_cod1": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam1": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam2": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam3": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam4": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam5": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "amt1": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "amt2": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "amt3": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "sad_exp": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "des2": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "bl_no1": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "da1": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "ordref": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "confref": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "da2": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "da3": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "obi_bok_cod": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "obl_no": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "oda": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "acc_cod2": {
+        "type": "INTEGER",
+        "allowNull": false,
+        "primaryKey": false,
+        "unique": false,
+        "references": {
+            "model": "cost_tab",
+            "key": "acc_cod"
+        }
+    },
+    "acc_cod3": {
+        "type": "INTEGER",
+        "allowNull": false,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam6": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam7": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam8": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "amt50": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam9": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "acc_cod4": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "user_cod": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "user_da": {
+        "type": "datetime",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam10": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "acc_cod5": {
+        "type": "char(10)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "nam11": {
+        "type": "char(100)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "chkinref": {
+        "type": "numeric",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "img": {
+        "type": "blob(2147483647)",
+        "allowNull": true,
+        "primaryKey": false,
+        "unique": false
+    },
+    "idno": {
+        "type": "INTEGER",
+        "allowNull": false,
+        "primaryKey": true,
+        "unique": false
+    }
+}
