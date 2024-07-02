@@ -16,7 +16,7 @@ const SrcFolder = "src";
 // AllTables
 // FirstTable
 // <your table Name>
-const BuildType = "VoucherItems";
+const BuildType = "VoucherHeads";
 
 const FrontEndLastName = BuildType;
 

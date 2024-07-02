@@ -127,6 +127,11 @@
                 "name": "AlterSimple",
                 "url": "AlterSimple.html",
                 "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "AlterWithSSR",
+                "url": "AlterWithSSR.html",
+                "icon": "bi bi-pencil-square"
             }
         ]
     },
@@ -138,6 +143,11 @@
             {
                 "name": "Delete",
                 "url": "DeleteSimple.html",
+                "icon": "bi bi-trash"
+            },
+            {
+                "name": "DeleteSSR",
+                "url": "DeleteSSR.html",
                 "icon": "bi bi-trash"
             }
         ]
