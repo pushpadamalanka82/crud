@@ -1,17 +1,17 @@
 import { StartFunc as StartFuncTableTag } from "./TableTag.js";
 import { StartFunc as StartFuncForColumns } from "./ForColumns/EntryFile.js";
 
-const StartFunc = () => {
+const StartFunc = ({ inData }) => {
     StartFuncTableTag();
-    jFLocalInitialize().then();
+    jFLocalInitialize({ inData }).then();
 };
 
-const jFLocalInitialize = async () => {
+const jFLocalInitialize = ({ inData }) => {
     var $table = $('#table');
-    let jVarLocalData = await StartFuncForColumns();
+    let jVarLocalData = StartFuncForColumns({ inFirstRow: inData[0] });
 
     $table.bootstrapTable({
-        data: [],
+        data: inData,
         columns: jVarLocalData
     });
 };

@@ -1,13 +1,19 @@
-import { StartFunc as StartFuncInitializeSequelizeWithTableName } from '../modals/initializeSequelizeWithTableName.js';
+import { StartFunc as initializeSequelize } from '../../../kSequelize/initializeSequelize.js';
+
+import fs from "fs";
 
 let StartFunc = async ({ inId }) => {
     try {
+        const sequelize = await initializeSequelize();
+
+        let LocalSqlPath = fs.readFileSync("KData/JSON/324/sqlNeeded/sqlite/fp/transactions/head/WithInvGroup.sql", "utf8");
+        let Localreplaced = LocalSqlPath.replaceAll("\r\n", " ");
+        
+        const [results, metadata] = await sequelize.query(Localreplaced);
         const LocalReturnData = {};
-        const LocalTableData = await StartFuncInitializeSequelizeWithTableName();
-        const users = await LocalTableData.findAll();
 
         LocalReturnData.KTF = true;
-        LocalReturnData.JsonData = users;
+        LocalReturnData.JsonData = results;
 
         return await LocalReturnData;
     } catch (error) {
