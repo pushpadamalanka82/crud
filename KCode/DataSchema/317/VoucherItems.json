@@ -3,10 +3,10 @@
     "type": "INTEGER",
     "HtmlTags": {
       "Show": {
-        "title": "Item Code",
-        "Create": {
-          "title": "ItemCode"
-        }
+        "title": "Item Code"
+      },
+      "Create": {
+        "title": "ItemCode"
       }
     }
   },
@@ -19,10 +19,10 @@
     },
     "HtmlTags": {
       "Show": {
-        "title": "RefPK",
-        "Create": {
-          "title": "RefPK"
-        }
+        "title": "RefPK"
+      },
+      "Create": {
+        "title": "RefPK"
       }
     }
   },
@@ -30,10 +30,10 @@
     "type": "STRING",
     "HtmlTags": {
       "Show": {
-        "title": "ItemName",
-        "Create": {
-          "title": "ItemName"
-        }
+        "title": "ItemName"
+      },
+      "Create": {
+        "title": "ItemName"
       }
     }
   },
@@ -41,10 +41,10 @@
     "type": "STRING",
     "HtmlTags": {
       "Show": {
-        "title": "BatchRefPK",
-        "Create": {
-          "title": "BatchRefPK"
-        }
+        "title": "BatchRefPK"
+      },
+      "Create": {
+        "title": "BatchRefPK"
       }
     }
   },
@@ -52,10 +52,10 @@
     "type": "STRING",
     "HtmlTags": {
       "Show": {
-        "title": "BatchNumber",
-        "Create": {
-          "title": "BatchNumber"
-        }
+        "title": "BatchNumber"
+      },
+      "Create": {
+        "title": "BatchNumber"
       }
     }
   },
@@ -63,6 +63,9 @@
     "type": "INTEGER",
     "HtmlTags": {
       "Show": {
+        "title": "sno"
+      },
+      "Create": {
         "title": "sno"
       }
     }
@@ -72,6 +75,9 @@
     "HtmlTags": {
       "Show": {
         "title": "Qty"
+      },
+      "Create": {
+        "title": "Qty"
       }
     }
   },
@@ -79,6 +85,9 @@
     "type": "INTEGER",
     "HtmlTags": {
       "Show": {
+        "title": "Amount"
+      },
+      "Create": {
         "title": "Amount"
       }
     }
