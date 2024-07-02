@@ -8,7 +8,8 @@ import {
     GetfilterDataFunc as GetfilterDataFuncRepo,
     GetMaxWithKeyFunc as GetMaxWithKeyFuncRepo,
     GetMaxRowFunc as GetMaxRowFuncRepo,
-    GetUniqueWithKeyFunc as GetUniqueWithKeyFuncRepo
+    GetUniqueWithKeyFunc as GetUniqueWithKeyFuncRepo,
+    GetRawSqlFunc as GetRawSqlFuncRepo
 } from '../../repos/getFuncs/EntryFile.js';
 
 
@@ -123,6 +124,19 @@ let GetMaxRowFunc = (req, res) => {
     res.json(LocalFromRepo.JsonData);
 };
 
+let GetRawSqlFunc = async (req, res) => {
+    let LocalParams = req.params;
+    let LocalIfFromParam = LocalParams.id;
+    let LocalFromRepo = await GetRawSqlFuncRepo({ inId: LocalIfFromParam });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.json(LocalFromRepo.JsonData);
+};
+
 export {
     GetFunc, GetDataOnlyFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetFromModalUuidAndTSFunc,
@@ -130,5 +144,5 @@ export {
     GetBodyCheckFunc, GetRowCountFunc,
     GetColumnsSchemaFunc, GetFilterDataFunc,
     GetMaxWithKeyFunc, GetMaxRowFunc,
-    GetUniqueWithKeyFunc
+    GetUniqueWithKeyFunc, GetRawSqlFunc
 };

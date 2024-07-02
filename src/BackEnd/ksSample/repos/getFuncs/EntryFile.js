@@ -15,7 +15,8 @@ import {
     GetIdFunc as GetIdFuncDalsForSequelize,
     GetDataOnlyFunc as GetDataOnlyFuncDalsForSequelize,
     GetRowCountFunc as GetRowCountFuncDalsForSequelize,
-    GetColumnsSchemaFunc as GetColumnsSchemaFuncDalsForSequelize
+    GetColumnsSchemaFunc as GetColumnsSchemaFuncDalsForSequelize,
+    GetRawSqlFunc as GetRawSqlFuncDal
 } from '../../dalsForSequelize/getFuncs/EntryFile.js';
 
 import {
@@ -96,10 +97,18 @@ let GetMaxRowFunc = () => {
     return GetMaxRowFuncDal();
 };
 
+let GetRawSqlFunc = async ({ inId }) => {
+    if (ConfigJson.isSequelize) {
+        return await GetRawSqlFuncDal({ inId });
+    };
+
+    return await { KReason: "Only From Sql " };
+};
+
 export {
     GetFunc, GetDataOnlyFunc, GetFromModalFunc,
     GetFromModalUuidFunc, GetFromModalUuidAndTSFunc,
     GetIdFunc, GetBodyCheckFunc, GetRowCountFunc,
     GetColumnsSchemaFunc, GetfilterDataFunc, GetMaxWithKeyFunc, GetMaxRowFunc,
-    GetUniqueWithKeyFunc
+    GetUniqueWithKeyFunc, GetRawSqlFunc
 };
