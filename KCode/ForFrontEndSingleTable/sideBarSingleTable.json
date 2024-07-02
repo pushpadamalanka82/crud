@@ -26,12 +26,12 @@
             },
             {
                 "name": "ShowCreate",
-                "url": "TableFooterAddWSearch.html",
+                "url": "ShowTableFooterAddWSearch.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "TableFooterAddSSR",
-                "url": "TableFooterAddSSR.html",
+                "url": "ShowTableFooterAddSSR.html",
                 "icon": "bi bi-table"
             },
             {
