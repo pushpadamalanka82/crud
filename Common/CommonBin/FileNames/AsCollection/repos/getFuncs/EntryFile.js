@@ -6,6 +6,7 @@ let GetFunc = async () => {
     if (ConfigJson.isSequelize) {
         return await dalsForSequelize();
     };
+
     return GetFuncDal();
 };
 
