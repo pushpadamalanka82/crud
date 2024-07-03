@@ -16,7 +16,7 @@ const SrcFolder = "src";
 // AllTables
 // FirstTable
 // <your table Name>
-const BuildType = "bi_astab";
+const BuildType = "ItemNames";
 
 const FrontEndLastName = BuildType;
 

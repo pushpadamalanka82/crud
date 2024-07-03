@@ -24,10 +24,10 @@ let StartFunc = async () => {
             if (element.fileData[property].type === "DATE") {
                 element.fileData[property].type = DataTypes.DATE;
             };
-            
         };
 
-        sequelize.define(path.parse(element.name).name, element.fileData, { freezeTableName: true });
+        sequelize.define(path.parse(element.name).name, element.fileData,
+            { freezeTableName: true, timestamps: false, });
 
         //sequelize.define(path.parse(element.name).name, element.fileData, { freezeTableName: true });
     });
@@ -36,5 +36,4 @@ let StartFunc = async () => {
     // sequelize.sync({ force: true });
 };
 
-export { StartFunc }
-// StartFunc().then();
+export { StartFunc };
