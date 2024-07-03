@@ -5,38 +5,38 @@
         "icon": "bi bi-grid"
     },
     {
-        "name": "Customers",
-        "key": "Customers",
+        "name": "ItemNames",
+        "key": "ItemNames",
         "icon": "bi bi-people",
         "children": [
             {
                 "name": "Create New",
-                "url": "CustomersCreateClientSide.html",
+                "url": "ItemNamesCreateClientSide.html",
                 "icon": "bi bi-plus-circle"
             },
             {
                 "name": "Show",
-                "url": "CustomersShowSimpleTB.html",
+                "url": "ItemNamesShowSimpleTB.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "Delete",
-                "url": "CustomersDeleteSimple.html",
+                "url": "ItemNamesDeleteSimple.html",
                 "icon": "bi bi-trash"
             },
             {
                 "name": "Alter",
-                "url": "CustomersAlterSimple.html",
+                "url": "ItemNamesAlterSimple.html",
                 "icon": "bi bi-pencil-square"
             },
             {
                 "name": "ShowCreate",
-                "url": "CustomersTableFooterAddWSearch.html",
+                "url": "ItemNamesTableFooterAddWSearch.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "ShowWithSerial",
-                "url": "CustomersShowWithSerial.html",
+                "url": "ItemNamesShowWithSerial.html",
                 "icon": "bi bi-table"
             }
         ]
