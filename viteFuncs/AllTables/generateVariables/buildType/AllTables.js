@@ -1,5 +1,6 @@
 import ConfigJson from '../../../../bin/Config.json' with {type: 'json'};
-import sideBarItemsAllTables from '../../../../KCode/ForFrontEndSingleTable/sideBarItemsAllTables.json' with {type: 'json'};
+//import sideBarItemsAllTables from '../../../../KCode/ForFrontEndSingleTable/sideBarItemsAllTables.json' with {type: 'json'};
+import sideBarItemsAllTables from '../../../../KCode/ForFrontEndSingleTable/sideBarSingleTable.json' with {type: 'json'};
 
 import { StartFunc as mainTableSchema } from "../mainTableSchema.js";
 import { StartFunc as mainTableColumnsConfig } from "../mainTableColumnsConfig.js";

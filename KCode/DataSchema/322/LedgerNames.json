@@ -4,6 +4,9 @@
       "HtmlTags": {
         "Show": {
           "title": "Ledger Name"
+        },
+        "Create": {
+          "title": "Ledger Name"
         }
       }
     },

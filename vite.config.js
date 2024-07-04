@@ -9,7 +9,7 @@ import ConfigJson from './bin/Config.json' with {type: 'json'};
 import { StartFunc as StartFuncGetFiles } from "./viteFuncs/AllTables/getFiles.js";
 import { StartFunc as StartFuncGetVariables } from "./viteFuncs/AllTables/getVariables.js";
 
-import { StartFunc as CreateHtmlFiles } from "./viteFuncs/AllTables/CreateHtmlFiles.js";
+import { StartFunc as forHtmlFiles } from "./viteFuncs/forHtmlFiles.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -34,7 +34,7 @@ const FrontEndDistFolder = `publicDir/bin/${ConfigJson.jsonConfig.DataPk}`;
 
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
 
-CreateHtmlFiles({ inToPath: root, inBuildType: BuildType });
+forHtmlFiles({ inToPath: root, inBuildType: BuildType });
 
 let files = StartFuncGetFiles({ inRootFolder: FrontEndSrcFolder });
 
