@@ -1,5 +1,5 @@
 import { StartFunc as StartFuncTableTag } from "./TableTag.js";
-import { StartFunc as StartFuncForColumns } from "./ForColumns/EntryFile.js";
+// import { StartFunc as StartFuncForColumns } from "./ForColumns/EntryFile.js";
 import { StartFunc as onClickRow } from "./onClickRow/EntryFile.js";
 
 const StartFunc = () => {
@@ -9,7 +9,7 @@ const StartFunc = () => {
 
 const jFLocalInitialize = async () => {
     var $table = $('#table');
-    let jVarLocalData = await StartFuncForColumns();
+    // let jVarLocalData = await StartFuncForColumns();
 
     $table.bootstrapTable({
         data: [],
