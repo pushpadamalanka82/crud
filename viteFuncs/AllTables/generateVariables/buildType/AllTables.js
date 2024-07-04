@@ -24,7 +24,7 @@ const StartFunc = ({ mode, inFilesArray }) => {
             let LoopInsideTableName = path.parse(element).name;
             return filename.startsWith(LoopInsideTableName);
         });
-
+        console.log("LoopInsideTableName : ", LoopInsideTableName);
         if (LoopInsideTableName === undefined === false) {
             let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: LoopInsideTableName });
             let LoopInsideTableConfig = mainTableSchema({ inTableName: LoopInsideTableName });

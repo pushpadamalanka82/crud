@@ -30,6 +30,11 @@ const StartFunc = ({ inToPath }) => {
         for (const [key, value] of Object.entries(LocalHtmlFiles)) {
             let LocalFileData = fs.readFileSync(value, "utf8");
 
+            if (key === "index") {
+                fs.writeFileSync(`${inToPath}/${key}.html`, LocalFileData);
+                return;
+            };
+
             fs.writeFileSync(`${inToPath}/${LoopTableName}${key}.html`, LocalFileData);
         };
     });
