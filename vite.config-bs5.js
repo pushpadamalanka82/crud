@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 const commonSrcFolder = "src/Index/FrontEnd";
-const commonDistFolder = "../../../publicDir";
+const commonDistFolder = "dist";
 
 export default {
     root: resolve(__dirname, commonSrcFolder),
