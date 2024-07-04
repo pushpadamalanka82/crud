@@ -1,7 +1,18 @@
 import UrlJson from './url.json' with {type: 'json'};
 
 let StartFunc = () => {
-    window.location.href = `${UrlJson.RedirectToUrl}`;
+    LocalFuncForSingleTable();
+    LocalFuncForAllTables();
 };
 
-export { StartFunc }
+const LocalFuncForSingleTable = () => {
+    if (window.location.pathname.endsWith(`//${UrlJson.PresentUrl}`)) {
+        window.location.href = `${UrlJson.RedirectToUrl}`;
+    };
+};
+
+const LocalFuncForAllTables = () => {
+    window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}`;
+};
+
+export { StartFunc };
