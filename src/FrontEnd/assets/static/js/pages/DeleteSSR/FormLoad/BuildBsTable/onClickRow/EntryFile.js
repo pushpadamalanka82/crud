@@ -2,7 +2,7 @@ import { StartFunc as FetchDelete } from "./FetchDelete/Entry.js";
 
 const StartFunc = async (row, $element, field) => {
     console.log("field:", field);
-    if (field === 13) {
+    if (field === 2) {
         let jVarLocalFromSwal = await Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
