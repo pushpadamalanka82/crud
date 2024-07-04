@@ -32,7 +32,7 @@ const StartFunc = ({ inToPath }) => {
 
             if (key === "index") {
                 fs.writeFileSync(`${inToPath}/${key}.html`, LocalFileData);
-                return;
+                continue;
             };
 
             fs.writeFileSync(`${inToPath}/${LoopTableName}${key}.html`, LocalFileData);
