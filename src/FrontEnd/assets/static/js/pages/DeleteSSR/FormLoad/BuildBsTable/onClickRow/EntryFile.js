@@ -1,8 +1,7 @@
 import { StartFunc as FetchDelete } from "./FetchDelete/Entry.js";
 
 const StartFunc = async (row, $element, field) => {
-    console.log("field:", field);
-    if (field === 2) {
+    if (field === "KS-Delete") {
         let jVarLocalFromSwal = await Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -19,7 +18,9 @@ const StartFunc = async (row, $element, field) => {
         });
 
         if (jVarLocalFromSwal.isConfirmed) {
-            await FetchDelete({ inRowPk: row.pk });
+            if ("id" in row) {
+                await FetchDelete({ inRowPk: row.id });
+            };
         };
     };
 };

@@ -26,7 +26,7 @@
             {% for ColumnName, ColumnInfo in columnData %}
             <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
             {% endfor %}
-            <th data-formatter="jFLocalDeleteColumn">Delete</th>
+            <th data-field="KS-Delete" data-formatter="jFLocalDeleteColumn">Delete</th>
 
 
         </tr>
