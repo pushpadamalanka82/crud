@@ -4,7 +4,6 @@ import path, { resolve } from 'path'
 import { fileURLToPath } from 'url';
 import nunjucks from 'vite-plugin-nunjucks';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import ConfigJson from './bin/Config.json' with {type: 'json'};
 
 import { StartFunc as StartFuncGetFiles } from "./viteFuncs/AllTables/getFiles.js";
 import { StartFunc as StartFuncGetVariables } from "./viteFuncs/AllTables/getVariables.js";
@@ -30,7 +29,7 @@ if (fs.existsSync(FrontEndSrcFolder) === false) {
     console.log(`created folder : ${FrontEndSrcFolder}`);
 };
 
-const FrontEndDistFolder = `publicDir/bin/${ConfigJson.jsonConfig.DataPk}`;
+const FrontEndDistFolder = `publicDir/bin`;
 
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
 
