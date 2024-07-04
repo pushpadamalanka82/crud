@@ -1,5 +1,12 @@
-{
-    "name": "ShowAll",
-    "url": "ShowSSRSerialPage.html",
-    "icon": "bi bi-grid"
-}
+[
+    {
+        "name": "ShowAll",
+        "url": "ShowSSRSerialPage.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "Ceate",
+        "url": "CreateSimple.html",
+        "icon": "bi bi-grid"
+    }
+]

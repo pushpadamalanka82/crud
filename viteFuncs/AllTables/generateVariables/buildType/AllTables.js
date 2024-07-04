@@ -15,39 +15,29 @@ const StartFunc = ({ mode, inFilesArray }) => {
     const variables = {};
     let LocalFiles = inFilesArray;
     let LocalSideBarItems = LocalFuncGenerateSideBarJson();
-    console.log("LocalSideBarItems : ", LocalSideBarItems);
-    let LocalFilteredSideBarItems = LocalFuncFilterSideBarItems({ inSidebarItems: sidebarItems });
+    let LocalTableNames = getTableNames();
 
     Object.keys(LocalFiles).forEach((filename) => {
         if (filename.includes('layouts/FrontEnd')) filename = `layouts/FrontEnd/${filename}`
 
-        let LoopInsideFindSideBar = LocalFilteredSideBarItems.find(element => {
-            return filename.startsWith(element.name);
+        let LoopInsideTableName = LocalTableNames.find(element => {
+            let LoopInsideTableName = path.parse(element).name;
+            return filename.startsWith(LoopInsideTableName);
         });
 
-        if (LoopInsideFindSideBar === undefined === false) {
-            let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: filename });
-            let LoopInsideTableConfig = mainTableSchema({ inTableName: filename });
+        if (LoopInsideTableName === undefined === false) {
+            let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: LoopInsideTableName });
+            let LoopInsideTableConfig = mainTableSchema({ inTableName: LoopInsideTableName });
 
-            let LocalInsideForeignTable = foreignTableColumnsConfig({ inTableName: LoopInsideFindSideBar.name });
-            let LocalInsideSubTableName = "";
-
-            if (LocalInsideForeignTable === undefined === false) {
-                LocalInsideSubTableName = path.parse(LocalInsideForeignTable?.name)?.name;
-            };
-
-            // console.log("- ", filename, LocalInsideForeignTable);
             variables[filename + '.html'] = {
                 web_title: "Mazer Admin Dashboard",
                 filename: filename + '.html',
-                sidebarItems,
+                sidebarItems: LocalSideBarItems,
                 isDev: mode === 'development',
                 DataPk: ConfigJson.jsonConfig.DataPk,
-                tableName: LoopInsideFindSideBar.name,
-                subTableName: LocalInsideSubTableName,
+                tableName: path.parse(LoopInsideTableName).name,
                 columnData: LoopInsidecolumnData,
-                tableConfig: LoopInsideTableConfig,
-                foreignTablecolumnData: LocalInsideForeignTable?.fileData
+                tableConfig: LoopInsideTableConfig
             };
         };
     });
@@ -55,18 +45,24 @@ const StartFunc = ({ mode, inFilesArray }) => {
     return variables;
 };
 
-const LocalFuncGetTableNames = () => {
-
-};
-
 const LocalFuncGenerateSideBarJson = () => {
     let LocalTableNames = getTableNames();
 
     let LocalReturnArray = LocalTableNames.map(element => {
+        let LoopInsideTableName = path.parse(element).name;
+
+        let LocalSideBar = sideBarItems.map(element => {
+            return {
+                ...element,
+                url: `${LoopInsideTableName}${element.url}`
+            };
+        });
+
         return {
-            "name": path.parse(element).name,
-            "key": path.parse(element).name,
+            "name": LoopInsideTableName,
+            "key": LoopInsideTableName,
             "icon": "bi bi-database-add",
+            "children": LocalSideBar
         };
     });
 
