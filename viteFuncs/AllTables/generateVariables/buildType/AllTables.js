@@ -1,18 +1,21 @@
 import ConfigJson from '../../../../bin/Config.json' with {type: 'json'};
 //import sideBarItemsAllTables from '../../../../KCode/ForFrontEndSingleTable/sideBarItemsAllTables.json' with {type: 'json'};
-import sideBarItemsAllTables from '../../../../KCode/ForFrontEndSingleTable/sideBarSingleTable.json' with {type: 'json'};
+import sideBarItems from '../../../../KCode/ForAllTables/sideBarItems.json' with {type: 'json'};
 
 import { StartFunc as mainTableSchema } from "../mainTableSchema.js";
 import { StartFunc as mainTableColumnsConfig } from "../mainTableColumnsConfig.js";
 import { StartFunc as foreignTableColumnsConfig } from "../foreignTableColumnsConfig.js";
 
+import { StartFunc as getTableNames } from "../getTableNames.js";
+
 import path from "path";
 import _ from "lodash";
 
-const StartFunc = ({ mode, inFilesArray, inBuildType }) => {
+const StartFunc = ({ mode, inFilesArray }) => {
     const variables = {};
     let LocalFiles = inFilesArray;
-    let sidebarItems = sideBarItemsAllTables;
+    let LocalSideBarItems = LocalFuncGenerateSideBarJson();
+    console.log("LocalSideBarItems : ", LocalSideBarItems);
     let LocalFilteredSideBarItems = LocalFuncFilterSideBarItems({ inSidebarItems: sidebarItems });
 
     Object.keys(LocalFiles).forEach((filename) => {
@@ -52,11 +55,19 @@ const StartFunc = ({ mode, inFilesArray, inBuildType }) => {
     return variables;
 };
 
-const LocalFuncFilterSideBarItems = ({ inSidebarItems }) => {
-    let LocalReturnArray;
+const LocalFuncGetTableNames = () => {
 
-    LocalReturnArray = inSidebarItems.filter(element => {
-        return "children" in element;
+};
+
+const LocalFuncGenerateSideBarJson = () => {
+    let LocalTableNames = getTableNames();
+
+    let LocalReturnArray = LocalTableNames.map(element => {
+        return {
+            "name": path.parse(element).name,
+            "key": path.parse(element).name,
+            "icon": "bi bi-database-add",
+        };
     });
 
     return LocalReturnArray;

@@ -12,12 +12,3 @@ const StartFunc = () => {
 };
 
 export { StartFunc };
-
-
-
-// import { StartFunc as StartFuncBackend } from "./CrudGenerator/Backend.js";
-
-// let LocalFilesArray = StartFuncReadDataSchema();
-// // console.log("LocalFilesArray : ", LocalFilesArray);
-
-// StartFuncBackend({ inFilesArray: LocalFilesArray });
