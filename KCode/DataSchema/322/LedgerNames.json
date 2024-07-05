@@ -15,6 +15,9 @@
       "HtmlTags": {
         "Show": {
           "title": "Ledger Guid"
+        },
+        "Create": {
+          "title": "Ledger Guid"
         }
       }
     }
