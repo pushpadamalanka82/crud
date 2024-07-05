@@ -10,6 +10,11 @@
         "icon": "bi bi-grid"
     },
     {
+        "name": "CreateSSRWithDataList",
+        "url": "CreateSSRWithDataList.html",
+        "icon": "bi bi-grid"
+    },
+    {
         "name": "Alter",
         "url": "AlterWithSSR.html",
         "icon": "bi bi-grid"
