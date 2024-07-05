@@ -21,6 +21,9 @@ const StartFunc = async (row, $element, field) => {
             if ("id" in row) {
                 await FetchDelete({ inRowPk: row.id });
             };
+            if ("pk" in row) {
+                await FetchDelete({ inRowPk: row.pk });
+            };
         };
     };
 };
