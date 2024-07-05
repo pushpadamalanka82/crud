@@ -1,0 +1,35 @@
+{
+  "VoucherNumber": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "VoucherNumber"
+      },
+      "Create": {
+        "title": "VoucherNumber"
+      }
+    }
+  },
+  "VoucherType": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "VoucherType"
+      },
+      "Create": {
+        "title": "VoucherType"
+      }
+    }
+  },
+  "PartyName": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "PartyName"
+      },
+      "Create": {
+        "title": "PartyName"
+      }
+    }
+  }
+}

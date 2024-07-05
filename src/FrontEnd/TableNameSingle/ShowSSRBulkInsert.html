@@ -1,0 +1,65 @@
+{% set title = 'Account Profile' %}
+
+{% extends 'src/FrontEnd/layouts/master.html' %}
+
+{% block content %}
+<div class="alert alert-primary alert-dismissible fade show" role="alert" id="FromSaveId">
+    <strong id="RecordsCountId">1</strong> <strong>Uploaded sucessfully ..</strong> You should check in on some of those
+    fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="pagetitle">
+    <h1> <a id="RefreshBSTableId">Customers</a> </h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Masters</li>
+            <li class="breadcrumb-item">Customers</li>
+            <li class="breadcrumb-item active">Show All</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<div class="row">
+    <div class="col-6">
+        <div class="input-group mb-3">
+            <input type="file" class="form-control" id="formFile" placeholder="Recipient's username"
+                accept="application/json" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-primary" type="button" id="remove">Upload</button>
+        </div>
+    </div>
+</div>
+
+<div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<!-- <div id="toolbar">
+    <button id="remove" class="btn btn-primary">
+        <i class="fa fa-trash"></i> Upload
+    </button>
+</div> -->
+<table id="table">
+    <thead>
+        <tr>
+            <th data-field="#" data-formatter="jFGlobalSerialColumn">#</th>
+            {% for ColumnName, ColumnInfo in columnData %}
+            <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+</table>
+{% endblock %}
+
+{% block js %}
+<script>
+    function jFGlobalSerialColumn(value, row, index) {
+        return index + 1;
+    };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<script type="module" src="../assets/static/js/pages/ShowSSRBulkInsert/StartFunc.js"></script>
+{% endblock %}

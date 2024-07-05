@@ -23,5 +23,10 @@
         "name": "SubTableWSearch",
         "url": "SubTableWSearch.html",
         "icon": "bi bi-grid"
+    },
+    {
+        "name": "ShowSSRBulkInsert",
+        "url": "ShowSSRBulkInsert.html",
+        "icon": "bi bi-grid"
     }
 ]
