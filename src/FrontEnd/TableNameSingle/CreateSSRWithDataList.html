@@ -31,8 +31,8 @@
                                 <div class="col-md-8">
                                     {% if ColumnInfo.references %}
                                     <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
-                                    list="{{ColumnInfo.references.model}}DLId"   
-                                    {{ColumnInfo.HtmlTags.Create.RequiredTag}}
+                                        list="{{ColumnInfo.references.model}}DLId"
+                                        {{ColumnInfo.HtmlTags.Create.RequiredTag}}
                                         {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
                                     {% else %}
                                     <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
@@ -59,6 +59,13 @@
         </div>
     </div>
 </section>
+
+{% for ColumnName, ColumnInfo in columnData %}
+{% if ColumnInfo.references %}
+<datalist id="{{ColumnInfo.references.model}}DLId"></datalist>
+{% endif %}
+{% endfor %}
+
 {% endblock %}
 
 {% block js %}
