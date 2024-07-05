@@ -6,7 +6,6 @@ import { StartFunc as mainTableColumnsConfig } from "../mainTableColumnsConfig.j
 import { StartFunc as getTableNames } from "../getTableNames.js";
 import { StartFunc as foreignTableColumnsConfig } from "../foreignTableColumnsConfig.js";
 
-
 import path from "path";
 import _ from "lodash";
 
@@ -39,8 +38,6 @@ const StartFunc = ({ mode, inFilesArray }) => {
             let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: LoopInsideTableName });
             let LoopInsideTableConfig = mainTableSchema({ inTableName: LoopInsideTableName });
             let LocalInsideForeignTable = foreignTableColumnsConfig({ inTableName: path.parse(LoopInsideTableName).name });
-            // console.log("LocalInsideForeignTable:", LocalInsideForeignTable);
-
 
             LoopInsideVariableObject.filename = filename + '.html';
             LoopInsideVariableObject.DataPk = ConfigJson.jsonConfig.DataPk;
@@ -49,9 +46,9 @@ const StartFunc = ({ mode, inFilesArray }) => {
             LoopInsideVariableObject.columnData = LoopInsidecolumnData;
             LoopInsideVariableObject.tableConfig = LoopInsideTableConfig;
 
-
             if (LocalInsideForeignTable === undefined === false) {
                 LoopInsideVariableObject.subTableName = path.parse(LocalInsideForeignTable?.name)?.name;
+                LoopInsideVariableObject.foreignTablecolumnData = LocalInsideForeignTable?.fileData;
             };
 
             variables[filename + '.html'] = LoopInsideVariableObject;
