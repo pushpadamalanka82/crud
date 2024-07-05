@@ -4,6 +4,9 @@
       "HtmlTags": {
         "Show": {
           "title": "Item Name"
+        },
+        "Create": {
+          "title": "Item Name"
         }
       }
     }
