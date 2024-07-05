@@ -3,8 +3,9 @@ import sideBarItems from '../../../../KCode/ForAllTables/sideBarItems.json' with
 
 import { StartFunc as mainTableSchema } from "../mainTableSchema.js";
 import { StartFunc as mainTableColumnsConfig } from "../mainTableColumnsConfig.js";
-
 import { StartFunc as getTableNames } from "../getTableNames.js";
+import { StartFunc as foreignTableColumnsConfig } from "../foreignTableColumnsConfig.js";
+
 
 import path from "path";
 import _ from "lodash";
@@ -37,12 +38,21 @@ const StartFunc = ({ mode, inFilesArray }) => {
         if (LoopInsideTableName === undefined === false) {
             let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: LoopInsideTableName });
             let LoopInsideTableConfig = mainTableSchema({ inTableName: LoopInsideTableName });
+            let LocalInsideForeignTable = foreignTableColumnsConfig({ inTableName: path.parse(LoopInsideTableName).name });
+            // console.log("LocalInsideForeignTable:", LocalInsideForeignTable);
+
 
             LoopInsideVariableObject.filename = filename + '.html';
             LoopInsideVariableObject.DataPk = ConfigJson.jsonConfig.DataPk;
             LoopInsideVariableObject.tableName = path.parse(LoopInsideTableName).name;
+            // console.log("LoopInsideVariableObject.tableName:", LoopInsideVariableObject.tableName);
             LoopInsideVariableObject.columnData = LoopInsidecolumnData;
             LoopInsideVariableObject.tableConfig = LoopInsideTableConfig;
+
+
+            if (LocalInsideForeignTable === undefined === false) {
+                LoopInsideVariableObject.subTableName = path.parse(LocalInsideForeignTable?.name)?.name;
+            };
 
             variables[filename + '.html'] = LoopInsideVariableObject;
             return;

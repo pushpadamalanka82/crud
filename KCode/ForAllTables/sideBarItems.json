@@ -18,5 +18,10 @@
         "name": "DeleteSSR",
         "url": "DeleteSSR.html",
         "icon": "bi bi-grid"
+    },
+    {
+        "name": "SubTableWSearch",
+        "url": "SubTableWSearch.html",
+        "icon": "bi bi-grid"
     }
 ]

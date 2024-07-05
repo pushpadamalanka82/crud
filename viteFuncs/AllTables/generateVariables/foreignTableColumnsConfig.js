@@ -11,7 +11,8 @@ const StartFunc = ({ inTableName }) => {
         let k1 = _.findKey(element.fileData, o => {
             return o?.references?.model === inTableName;
         });
-
+        console.log("inTableName:", inTableName);
+        console.log("o?.references?.model:", k1);
         return k1 === undefined === false;
     });
 
