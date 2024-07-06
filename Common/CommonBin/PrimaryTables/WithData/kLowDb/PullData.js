@@ -8,6 +8,7 @@ let StartFunc = () => {
 
     console.log("LocalForeignTables:", LocalForeignTables);
     let LocalReturnData = { KTF: false }
+    LocalReturnData.JsonData = {};
 
     let LocalDataPath = `${ConfigJson.jsonConfig.DataPath}/${ConfigJson.jsonConfig.DataPk}`;
 
@@ -19,13 +20,13 @@ let StartFunc = () => {
                 const data = fs.readFileSync(`${LocalDataPath}/${file}`, { encoding: 'utf8' });
                 let JsonParseData = JSON.parse(data);
 
+                LocalReturnData.JsonData[path.parse(file).name] = JsonParseData;
                 console.log("File:", JsonParseData);
             };
         };
     });
 
     LocalReturnData.KTF = true;
-    LocalReturnData.JsonData = filenames;
 
     return LocalReturnData;
 };
