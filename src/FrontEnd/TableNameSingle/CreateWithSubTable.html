@@ -24,23 +24,26 @@
                     <form onsubmit="return false" id="FormId">
                         <div class="row ColumnsRow">
                             {% for ColumnName, ColumnInfo in columnData %}
-                            {% if ColumnInfo.references %}
-
-                            {% else %}
                             <div class="col-md-12">
-                                <label
-                                    class="col-md-4 col-form-label">{{ColumnInfo.HtmlTags.Create.title}}</label>
+                                <label class="col-md-4 col-form-label">{{ColumnInfo.HtmlTags.Create.title}}</label>
 
                                 <div class="col-md-8">
+                                    {% if ColumnInfo.references %}
+                                    <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
+                                        list="{{ColumnInfo.references.model}}DLId"
+                                        {{ColumnInfo.HtmlTags.Create.RequiredTag}}
+                                        {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                                    {% else %}
                                     <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
                                         {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
                                         {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
+
+                                    {% endif %}
                                     <div class="invalid-feedback">
                                         Should not be Empty!!
                                     </div>
                                 </div>
                             </div>
-                            {% endif %}
                             {% endfor %}
                         </div>
                         <div class="row mt-3">
@@ -59,12 +62,20 @@
                                 {% for ColumnName, ColumnInfo in foreignTablecolumnData %}
                                 <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
                                 {% endfor %}
-                                <th >Options</th>
+                                <th>Options</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr id="tableFooterId">
                                 {% for ColumnName, ColumnInfo in foreignTablecolumnData %}
+                                {% if ColumnInfo.references %}
+                                <th>
+                                    <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
+                                        list="{{ColumnInfo.references.model}}DLId"
+                                        {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
+                                        {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
+                                </th>
+                                {% else %}
                                 {% if ColumnInfo.type === "DATEONLY" %}
                                 <th>
                                     <input name="{{ColumnName}}" type="date" class="form-control" autocomplete="off"
@@ -80,16 +91,17 @@
                                         {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
                                         {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
                                 </th>
-                               
+                                {% endif %}
                                 {% endif %}
                                 {% endfor %}
                                 <th>
-                                    <button class="btn btn-outline-success" type="button" id="SubTableFooterSaveButtonId">Save</button>
-                    
+                                    <button class="btn btn-outline-success" type="button"
+                                        id="SubTableFooterSaveButtonId">Save</button>
+
                                 </th>
                             </tr>
                         </tfoot>
-                    
+
                     </table>
                     {% endif %}
                 </div>
@@ -99,6 +111,17 @@
     </div>
 </section>
 
+{% for ColumnName, ColumnInfo in columnData %}
+{% if ColumnInfo.references %}
+<datalist id="{{ColumnInfo.references.model}}DLId"></datalist>
+{% endif %}
+{% endfor %}
+
+{% for ColumnName, ColumnInfo in foreignTablecolumnData %}
+{% if ColumnInfo.references %}
+<datalist id="{{ColumnInfo.references.model}}DLId"></datalist>
+{% endif %}
+{% endfor %}
 
 {% endblock %}
 

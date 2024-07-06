@@ -3,6 +3,10 @@ import { StartFunc as ForData } from "./ForData/EntryFile.js";
 const StartFunc = async () => {
     let jVarLocalData = await ForData();
 
+    if (jVarLocalData === false) {
+        return await false;
+    };
+
     jFLocalShowInInputs({ inDataAsObject: jVarLocalData });
     jFBsRefereshId();
     return jVarLocalData;

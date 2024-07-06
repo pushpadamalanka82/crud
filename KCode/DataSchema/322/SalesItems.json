@@ -1,0 +1,34 @@
+{
+  "Item Name": {
+    "type": "STRING",
+    "allowNull": false,
+    "references": {
+      "model": "ItemNames",
+      "key": "Item Name"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Name"
+      },
+      "Create": {
+        "title": "Item Name"
+      }
+    }
+  },
+  "RefPK": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "references": {
+      "model": "Sales",
+      "key": "id"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "RefPK"
+      },
+      "Create": {
+        "title": "RefPK"
+      }
+    }
+  }
+}

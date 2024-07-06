@@ -6,6 +6,12 @@ const StartFunc = async () => {
     ShowOnDom().then();
     BuildBsTableForSubTable();
     StartFuncAddListeners();
+    jFLocalFillDataLists();
+};
+
+const jFLocalFillDataLists = () => {
+    let jVarLocalHeaderToDataListId = document.getElementById('HeaderToDataListId');
+    jVarLocalHeaderToDataListId.click();
 };
 
 export { StartFunc };

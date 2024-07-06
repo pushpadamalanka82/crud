@@ -29,7 +29,7 @@ let StartFunc = ({ inDataToInsert }) => {
         let LocalK1 = Object.values(LocalKeysNeeded)[0].references;
         let LocalDataNeeded = StartFuncForeignKeyCheck({
             inFileName: LocalK1.model,
-            inFolderName: LocalK1.folderName, NeededKey: LocalValueNeeded
+            inKey: LocalK1.key, NeededKey: LocalValueNeeded
         });
 
         if (LocalDataNeeded.KTF === false) {

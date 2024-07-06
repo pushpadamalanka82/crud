@@ -6,13 +6,15 @@ let StartFunc = () => {
         let jVarLocalHtmlId = `${key}DLId`;
         let jVarLocalHtmlControl = document.getElementById(jVarLocalHtmlId);
 
-        fillDataList({ inDataListId: jVarLocalHtmlControl, inDataArray: value });
+        if (jVarLocalHtmlControl === null === false) {
+            fillDataList({ inDataListId: jVarLocalHtmlControl, inDataArray: value });
+        };
     };
 };
 
 function fillDataList({ inDataListId, inDataArray }) {
     inDataListId.innerHTML = "";
-    
+    console.log("inDataArray : ", inDataArray);
     inDataArray.forEach(element => {
         var option = document.createElement('option');
         option.value = element;

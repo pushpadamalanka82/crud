@@ -50,7 +50,7 @@ const StartFunc = ({ mode, inFilesArray }) => {
                 LoopInsideVariableObject.subTableName = path.parse(LocalInsideForeignTable?.name)?.name;
                 LoopInsideVariableObject.foreignTablecolumnData = LocalInsideForeignTable?.fileData;
             };
-
+            // console.log("LoopInsideVariableObject : ", LoopInsideVariableObject);
             variables[filename + '.html'] = LoopInsideVariableObject;
             return;
         };
