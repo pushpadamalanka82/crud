@@ -21,7 +21,6 @@ let StartFunc = () => {
                 let JsonParseData = JSON.parse(data);
 
                 LocalReturnData.JsonData[path.parse(file).name] = JsonParseData;
-                console.log("File:", JsonParseData);
             };
         };
     });
