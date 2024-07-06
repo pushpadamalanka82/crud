@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app",
     "build": "vite build",
-    "home": "vite build --config vite.config-bs5.js"
+    "home": "vite build --config KCode/viteConfig/vite.config-bs5.js",
+    "AllTables": "vite build --config KCode/viteConfig/vite.config-nice-AllTables.js",
+    "CustomTableName": "vite build --config KCode/viteConfig/vite.config-nice-CustomTableName.js"
   },
   "author": "",
   "license": "ISC",
