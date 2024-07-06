@@ -15,3 +15,5 @@ src/FrontEnd/assets/static/DataSchema
 .vscode
 
 .log
+
+defineConfig.js
