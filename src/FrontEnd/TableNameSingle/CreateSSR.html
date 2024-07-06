@@ -1,15 +1,15 @@
 {% set title = 'Account Profile' %}
 
-{% extends 'src/FrontEnd/layouts/masterWithDataLists.html' %}
+{% extends 'src/FrontEnd/layouts/masterSimple.html' %}
 
 {% block content %}
 <div class="pagetitle">
-    <h1>Form Elements</h1>
+    <h1>CreateNew</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item">Forms</li>
-            <li class="breadcrumb-item active">Elements</li>
+            <li class="breadcrumb-item">{{tableName}}</li>
+            <li class="breadcrumb-item active">CreateNew</li>
         </ol>
     </nav>
 </div><!-- End Page Title -->
@@ -29,12 +29,6 @@
                                 <label class="col-md-4 col-form-label">{{ColumnInfo.HtmlTags.Create.title}}</label>
 
                                 <div class="col-md-8">
-                                    {% if ColumnInfo.references %}
-                                    <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
-                                        list="{{ColumnInfo.references.model}}DLId"
-                                        {{ColumnInfo.HtmlTags.Create.RequiredTag}}
-                                        {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
-                                    {% else %}
 
                                     {% if ColumnInfo.type === "DATEONLY" %}
 
@@ -50,7 +44,6 @@
                                         {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
                                     {% endif %}
 
-                                    {% endif %}
 
                                     <div class="invalid-feedback">
                                         Should not be Empty!!
@@ -72,14 +65,8 @@
     </div>
 </section>
 
-{% for ColumnName, ColumnInfo in columnData %}
-{% if ColumnInfo.references %}
-<datalist id="{{ColumnInfo.references.model}}DLId"></datalist>
-{% endif %}
-{% endfor %}
-
 {% endblock %}
 
 {% block js %}
-<script type="module" src="../assets/static/js/pages/CreateSimple/StartFunc.js"></script>
+<script type="module" src="../assets/static/js/pages/CreateSSR/StartFunc.js"></script>
 {% endblock %}

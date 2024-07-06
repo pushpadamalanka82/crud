@@ -1,0 +1,38 @@
+  {
+    "FriendName": {
+      "type": "STRING",
+      "unique": true,
+      "HtmlTags": {
+        "Show": {
+          "title": "FriendName"
+        },
+        "Create": {
+          "title": "FriendName",
+          "AutoFocusTag": "autofocus"
+        }
+      }
+    },
+    "FriendMobile": {
+      "type": "STRING",
+      "unique": true,
+      "HtmlTags": {
+        "Show": {
+          "title": "FriendMobile"
+        },
+        "Create": {
+          "title": "FriendMobile"
+        }
+      }
+    },
+    "FriendMDOB": {
+      "type": "DATEONLY",
+      "HtmlTags": {
+        "Show": {
+          "title": "FriendMDOB"
+        },
+        "Create": {
+          "title": "FriendMDOB"
+        }
+      }
+    }
+  }

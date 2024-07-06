@@ -1,0 +1,12 @@
+[
+    {
+        "name": "ShowAll",
+        "url": "ShowSSR.html",
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "CreateNew",
+        "url": "CreateSSR.html",
+        "icon": "bi bi-grid"
+    }
+]
