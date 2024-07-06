@@ -1,12 +1,10 @@
 import fs from "fs";
-import dirTree from "directory-tree";
 import ConfigJson from '../../../../../bin/Config.json' assert {type: 'json'};
 import path from "path";
 
 let StartFunc = () => {
     let LocalForeignTables = LocalFuncReturnForeignTables();
 
-    console.log("LocalForeignTables:", LocalForeignTables);
     let LocalReturnData = { KTF: false }
     LocalReturnData.JsonData = {};
 
@@ -16,11 +14,29 @@ let StartFunc = () => {
 
     filenames.forEach((file) => {
         if (fs.lstatSync(`${LocalDataPath}/${file}`).isFile()) {
-            if (LocalForeignTables.includes(path.parse(file).name)) {
-                const data = fs.readFileSync(`${LocalDataPath}/${file}`, { encoding: 'utf8' });
-                let JsonParseData = JSON.parse(data);
+            let LoopInsideTableName = path.parse(file).name;
 
-                LocalReturnData.JsonData[path.parse(file).name] = JsonParseData;
+            if (LocalForeignTables.includes(LoopInsideTableName)) {
+                let LoopInsideTableColumns = ConfigJson.jsonConfig.tableAndColumns.children.find(element => {
+                    return element.name === file;
+                });
+
+                let LoopInsideColumnName;
+
+                for (const [key, value] of Object.entries(LoopInsideTableColumns.fileData)) {
+                    if (value.unique) {
+                        LoopInsideColumnName = key;
+                    };
+                };
+
+                const data = fs.readFileSync(`${LocalDataPath}/${file}`, { encoding: 'utf8' });
+
+                let JsonParseData = JSON.parse(data);
+                let LoopInsideArrayNeeded = JsonParseData.map(element => {
+                    return element[LoopInsideColumnName];
+                });
+
+                LocalReturnData.JsonData[LoopInsideTableName] = LoopInsideArrayNeeded.sort();
             };
         };
     });
