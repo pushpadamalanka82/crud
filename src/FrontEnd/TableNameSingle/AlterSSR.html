@@ -29,8 +29,18 @@
                                 <label class="col-md-4 col-form-label">{{ColumnInfo.HtmlTags.Create.title}}</label>
 
                                 <div class="col-md-8">
-                                    <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
-                                    {{ColumnInfo.HtmlTags.Create.RequiredTag}} {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                                    {% if ColumnInfo.type === "DATEONLY" %}
+                                    <input name="{{ColumnName}}" type="date" class="form-control" autocomplete="off"
+                                        {{ColumnInfo.HtmlTags.Create.RequiredTag}}
+                                        {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                                    {% endif %}
+
+                                    {% if ColumnInfo.type === "text" %}
+                                    <input name="{{ColumnName}}" type="date" class="form-control" autocomplete="off"
+                                        {{ColumnInfo.HtmlTags.Create.RequiredTag}}
+                                        {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                                    {% endif %}
+                               
                                     <div class="invalid-feedback">
                                         Should not be Empty!!
                                     </div>
