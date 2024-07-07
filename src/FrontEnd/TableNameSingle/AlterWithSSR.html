@@ -26,7 +26,7 @@
             {% for ColumnName, ColumnInfo in columnData %}
             <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
             {% endfor %}
-            <th data-formatter="jFLocalAlterColumn">Alter</th>
+            <th data-field="KS-AlterButton" data-formatter="jFLocalAlterColumn">Alter</th>
 
 
         </tr>

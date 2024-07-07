@@ -1,8 +1,7 @@
 import { StartFunc as AfterFetch } from "./AfterFetch.js";
 
 const StartFunc = async (row, $element, field) => {
-    console.log("field:", field);
-    if (field === 2) {
+    if (field === "KS-AlterButton") {
         let jVarLocalFromSwal = await Swal.fire({
             title: "Are you sure?",
             text: "You want to edit this row?",
@@ -19,7 +18,12 @@ const StartFunc = async (row, $element, field) => {
         });
 
         if (jVarLocalFromSwal.isConfirmed) {
-            AfterFetch({ inRowPk: row.pk });
+            if ("id" in row) {
+                AfterFetch({ inRowPk: row.id });
+            };
+            if ("pk" in row) {
+                AfterFetch({ inRowPk: row.pk });
+            };
         };
     };
 };
