@@ -4,10 +4,10 @@
       "unique": true,
       "HtmlTags": {
         "Show": {
-          "title": "FriendName"
+          "title": "Name"
         },
         "Create": {
-          "title": "FriendName",
+          "title": "Name",
           "AutoFocusTag": "autofocus"
         }
       }
@@ -17,10 +17,22 @@
       "unique": true,
       "HtmlTags": {
         "Show": {
-          "title": "FriendMobile"
+          "title": "Mobile"
         },
         "Create": {
-          "title": "FriendMobile"
+          "title": "Mobile"
+        }
+      }
+    },
+    "FriendAlternateMobile": {
+      "type": "STRING",
+      "unique": true,
+      "HtmlTags": {
+        "Show": {
+          "title": "Alternate Mobile"
+        },
+        "Create": {
+          "title": "Alternate Mobile"
         }
       }
     },
@@ -28,10 +40,10 @@
       "type": "DATEONLY",
       "HtmlTags": {
         "Show": {
-          "title": "FriendMDOB"
+          "title": "Date of Birth"
         },
         "Create": {
-          "title": "FriendMDOB"
+          "title": "Date of Birth"
         }
       }
     }
