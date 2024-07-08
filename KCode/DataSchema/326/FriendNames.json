@@ -26,7 +26,7 @@
     },
     "FriendAlternateMobile": {
       "type": "STRING",
-      "unique": true,
+      "allowNull": true,
       "HtmlTags": {
         "Show": {
           "title": "Alternate Mobile"
