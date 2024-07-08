@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Customers",
+        "isTitle": true,
+        "icon": "bi bi-app"
+    },
+    {
+        "name": "CreateSimple",
+        "url": "CreateSimple.html",
+        "icon": "bi bi-plus-circle"
+    },
+    {
+        "name": "ShowSSR",
+        "url": "ShowSSR.html",
+        "icon": "bi bi-plus-circle"
+    }
+]
