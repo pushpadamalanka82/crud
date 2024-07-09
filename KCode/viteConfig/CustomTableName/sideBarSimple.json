@@ -2,21 +2,21 @@
     {
         "name": "Customers",
         "isTitle": true,
-        "icon": "bi bi-app"
+        "icon": "bi bi-back"
     },
     {
         "name": "Create New",
         "url": "CreateSSR.html",
-        "icon": "bi bi-plus-circle"
+        "icon": "bi bi-file-plus"
     },
     {
         "name": "ShowSSR",
         "url": "ShowSSR.html",
-        "icon": "bi bi-plus-circle"
+        "icon": "bi bi-window-plus"
     },
     {
         "name": "Alter",
         "url": "AlterWithSSR.html",
-        "icon": "bi bi-grid"
+        "icon": "bi bi-box-arrow-up-right"
     }
 ]

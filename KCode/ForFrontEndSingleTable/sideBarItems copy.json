@@ -2,7 +2,7 @@
     {
         "name": "Menu",
         "isTitle": true,
-        "icon": "bi bi-grid"
+        "icon": "bi bi-back"
     },
     {
         "name": "Create",
