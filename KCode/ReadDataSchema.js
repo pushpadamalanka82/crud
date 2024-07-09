@@ -11,8 +11,8 @@ let StartFunc = () => {
 
     tree.children.forEach(element => {
         let LoopInsideFileData = fs.readFileSync(element.path, "utf8");
+
         element.fileData = JSON.parse(LoopInsideFileData);
-        // console.log("LoopInsideFileData: ", LoopInsideFileData);
     });
 
     return tree;

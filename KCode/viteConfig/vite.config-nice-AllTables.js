@@ -9,6 +9,8 @@ import { StartFunc as StartFuncGetFiles } from "./AllTables/getFiles.js";
 import { StartFunc as StartFuncGetVariables } from "./AllTables/getVariables.js";
 
 import { StartFunc as CreateHtmlFiles } from "./AllTables/CreateHtmlFiles.js";
+import { StartFunc as CreateJsFiles } from "./AllTables/CreateJsFiles.js";
+import { StartFunc as CopyJsonForTable } from "./AllTables/CopyJsonForTable.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -34,6 +36,8 @@ const FrontEndDistFolder = `publicDir/bin`;
 const root = resolve(__dirname, `../../${FrontEndSrcFolder}`);
 
 CreateHtmlFiles({ inToPath: root });
+CreateJsFiles();
+// CopyJsonForTable();
 
 let files = StartFuncGetFiles({ inRootFolder: FrontEndSrcFolder });
 

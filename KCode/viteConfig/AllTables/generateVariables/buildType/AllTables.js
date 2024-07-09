@@ -26,7 +26,8 @@ const StartFunc = ({ mode, inFilesArray }) => {
             DataPk: 316,
             tableName: "",
             columnData: {},
-            tableConfig: {}
+            tableConfig: {},
+            jsPath: "pages"
         };
 
         let LoopInsideTableName = LocalTableNames.find(element => {
@@ -50,8 +51,12 @@ const StartFunc = ({ mode, inFilesArray }) => {
                 LoopInsideVariableObject.subTableName = path.parse(LocalInsideForeignTable?.name)?.name;
                 LoopInsideVariableObject.foreignTablecolumnData = LocalInsideForeignTable?.fileData;
             };
+
+            LoopInsideVariableObject.jsPath = "pagesForAllTables";
+
             // console.log("LoopInsideVariableObject : ", LoopInsideVariableObject);
             variables[filename + '.html'] = LoopInsideVariableObject;
+
             return;
         };
 

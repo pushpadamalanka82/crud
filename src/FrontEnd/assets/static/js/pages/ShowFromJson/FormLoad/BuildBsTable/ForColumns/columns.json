@@ -1,0 +1,7 @@
+[
+    {
+        "field": "KS-Serial",
+        "title": "#",
+        "formatter": "jFGlobalSerialColumn"
+    }   
+]
