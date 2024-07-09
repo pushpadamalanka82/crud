@@ -15,7 +15,7 @@ const SrcFolder = "src";
 // AllTables
 // FirstTable
 // <your table Name>
-const BuildType = "ItemNames";
+const BuildType = "FriendNames";
 
 const FrontEndLastName = BuildType;
 
@@ -52,7 +52,7 @@ export default defineConfig((env) => ({
     plugins: [
         viteStaticCopy({
             targets: [
-                { src: normalizePath(resolve(__dirname, `./${SrcFolder}/FrontEnd/assets/static`)), dest: "../assets" },
+                { src: normalizePath(resolve(__dirname, `../../${SrcFolder}/FrontEnd/assets/static`)), dest: "assets" },
                 { src: normalizePath(resolve(__dirname, `./${FrontEndSrcFolder}/assets/compiled/fonts`)), dest: 'assets/compiled/css' },
                 { src: normalizePath(resolve(__dirname, "./node_modules/bootstrap-icons/bootstrap-icons.svg")), dest: 'assets/static/images' }
             ],
