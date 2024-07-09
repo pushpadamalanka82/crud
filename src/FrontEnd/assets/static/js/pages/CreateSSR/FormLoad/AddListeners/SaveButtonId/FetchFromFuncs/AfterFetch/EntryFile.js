@@ -11,9 +11,11 @@ const LocalFuncForSingleTable = () => {
         window.location.href = `${UrlJson.RedirectToUrl}`;
         return true;
     };
+    return false;
 };
 
 const LocalFuncForAllTables = () => {
+    let jVarLocalHref = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}`;
     window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}`;
 };
 
