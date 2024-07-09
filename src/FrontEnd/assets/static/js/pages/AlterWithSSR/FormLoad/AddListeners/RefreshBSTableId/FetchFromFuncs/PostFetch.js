@@ -5,7 +5,7 @@ let StartFunc = async () => {
 
     let jVarLocalFetchUrl = `/bin/${jVarLocalTableName}/DataOnly`;
     let response = await fetch(jVarLocalFetchUrl);
-
+    console.log("response",response);
     return await response;
 };
 
