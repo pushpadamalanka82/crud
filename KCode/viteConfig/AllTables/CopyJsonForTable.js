@@ -25,13 +25,14 @@ const StartFunc = () => {
             return element.endsWith("columns.json");
         });
 
-        LocalColumnsJsonFiles.forEach(element => {
-            let LocalFileData = fs.readFileSync(element, "utf8");
+        // LocalColumnsJsonFiles.forEach(element => {
+        //     let LocalFileData = fs.readFileSync(element, "utf8");
 
-            // console.log("LocalFileData : ", element.replace(`${CommonFromFolder}/`, "").split("/")[0], LocalFileData, LocalDataSchema);
+        //     // console.log("LocalFileData : ", element.replace(`${CommonFromFolder}/`, "").split("/")[0], LocalFileData, LocalDataSchema);
 
-            console.log("LocalFileData : ", element, LocalFileData, LocalDataSchema);
-        });
+        //     console.log("LocalFileData : ", element, LocalFileData, LocalDataSchema);
+        // });
+
     });
 };
 
@@ -41,11 +42,11 @@ var walkSync = function (dir, filelist) {
     filelist = filelist || [];
 
     files.forEach(function (file) {
-        if (fs.statSync(`${dir} / ${file}`).isDirectory()) {
-            filelist = walkSync(`${dir} / ${file} / `, filelist);
+        if (fs.statSync(`${dir}/${file}`).isDirectory()) {
+            filelist = walkSync(`${dir}/${file}/`, filelist);
         }
         else {
-            filelist.push(`${dir} / ${file}`);
+            filelist.push(`${dir}/${file}`);
         }
     });
 

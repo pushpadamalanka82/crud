@@ -37,11 +37,13 @@ const StartFunc = ({ inToPath }) => {
             } else {
                 let LocalFindScript = LocalFileData.search('<script type="module" src="../assets/static/js/pages/ShowFromJson/StartFunc.js"></script>');
 
-                if (LocalFindScript >= 0) {
-                    fs.writeFileSync(`${inToPath}/${LoopTableName}${key}.html`, LocalFileData.replace('<script type="module" src="../assets/static/js/pages/ShowFromJson/StartFunc.js"></script>',`<script type="module" src="../assets/static/js/src/FrontEnd/assets/static/js/pagesForAllTables/${LoopTableName}/ShowFromJson/StartFunc.js"></script>`));
-                } else {
-                    fs.writeFileSync(`${inToPath}/${LoopTableName}${key}.html`, LocalFileData);
-                };
+                // if (LocalFindScript >= 0) {
+                //     fs.writeFileSync(`${inToPath}/${LoopTableName}${key}.html`, LocalFileData.replace('<script type="module" src="../assets/static/js/pages/ShowFromJson/StartFunc.js"></script>',`<script type="module" src="../assets/static/js/src/FrontEnd/assets/static/js/pagesForAllTables/${LoopTableName}/ShowFromJson/StartFunc.js"></script>`));
+                // } else {
+                //     fs.writeFileSync(`${inToPath}/${LoopTableName}${key}.html`, LocalFileData);
+                // };
+
+                fs.writeFileSync(`${inToPath}/${LoopTableName}${key}.html`, LocalFileData);
             };
         };
     });

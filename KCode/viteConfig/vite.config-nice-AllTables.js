@@ -36,7 +36,7 @@ const FrontEndDistFolder = `publicDir/bin`;
 const root = resolve(__dirname, `../../${FrontEndSrcFolder}`);
 
 CreateHtmlFiles({ inToPath: root });
-CreateJsFiles();
+// CreateJsFiles();
 // CopyJsonForTable();
 
 let files = StartFuncGetFiles({ inRootFolder: FrontEndSrcFolder });
