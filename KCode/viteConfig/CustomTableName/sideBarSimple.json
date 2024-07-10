@@ -18,5 +18,10 @@
         "name": "Alter",
         "url": "AlterWithSSR.html",
         "icon": "bi bi-box-arrow-up-right"
+    },
+    {
+        "name": "Delete",
+        "url": "DeleteSSR.html",
+        "icon": "bi bi-trash3"
     }
 ]
