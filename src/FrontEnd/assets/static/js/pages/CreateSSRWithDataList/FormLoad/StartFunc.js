@@ -1,13 +1,11 @@
 import { StartFunc as StartFuncAddListeners } from "./AddListeners/StartFunc.js";
+import { StartFunc as ToLocalStorage } from "./ToLocalStorage/StartFunc.js";
+import { StartFunc as ToDataList } from "./ToDataList/StartFunc.js";
 
 const StartFunc = async () => {
     StartFuncAddListeners();
-    jFLocalFillDataLists();
-};
-
-const jFLocalFillDataLists = () => {
-    let jVarLocalHeaderToDataListId = document.getElementById('HeaderToDataListId');
-    jVarLocalHeaderToDataListId.click();
+    ToLocalStorage();
+    ToDataList();
 };
 
 export { StartFunc };

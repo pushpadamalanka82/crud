@@ -14,7 +14,7 @@ let StartFunc = () => {
 
 function fillDataList({ inDataListId, inDataArray }) {
     inDataListId.innerHTML = "";
-    console.log("inDataArray : ", inDataArray);
+    
     inDataArray.forEach(element => {
         var option = document.createElement('option');
         option.value = element;
