@@ -1,28 +1,26 @@
 import UrlJson from './url.json' with {type: 'json'};
 
 let StartFunc = () => {
-    window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}`;
-    if (LocalFuncForSingleTable({ inRowPk }) === false) {
-        // LocalFuncForAllTables({ inRowPk });
+    //  window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}`;
+    if (LocalFuncForSingleTable() === false) {
+        LocalFuncForAllTables();
     };
 
 };
-const LocalFuncForSingleTable = ({ inRowPk }) => {
-    let LocalRowPk = inRowPk;
-    console.log("hi")
-
-
-
+const LocalFuncForSingleTable = () => {
     if (window.location.pathname.endsWith(`/${UrlJson.PresentUrl}`)) {
-        window.location.href = `${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
+        let jVarLocalHref = `${UrlJson.RedirectToUrl}`;
+
+        window.location.href = jVarLocalHref;
+
         return true;
     };
 };
 
-const LocalFuncForAllTables = ({ inRowPk }) => {
+const LocalFuncForAllTables = () => {
     let LocalRowPk = inRowPk;
 
-    window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
+    window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}`;
 };
 
 export { StartFunc }
