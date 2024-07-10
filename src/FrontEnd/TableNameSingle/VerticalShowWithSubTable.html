@@ -28,28 +28,10 @@
                                 <label class="col-md-4 col-form-label">{{ColumnInfo.HtmlTags.Create.title}}</label>
 
                                 <div class="col-md-8">
-                                    {% if ColumnInfo.references %}
-                                    <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
-                                        list="{{ColumnInfo.references.model}}DLId"
-                                        {{ColumnInfo.HtmlTags.Create.RequiredTag}}
-                                        {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
-                                    {% else %}
-                                    <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
-                                        {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
-                                        {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
-
-                                    {% endif %}
-                                    <div class="invalid-feedback">
-                                        Should not be Empty!!
-                                    </div>
+                                    <input name="{{ColumnName}}" type="text" class="form-control" disabled>
                                 </div>
                             </div>
                             {% endfor %}
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-sm-10">
-                                <button id="SaveButtonId" class="btn btn-primary">Save</button>
-                            </div>
                         </div>
                     </form>
 
@@ -79,6 +61,7 @@
                                         {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
                                 </th>
                                 {% else %}
+
                                 {% if ColumnInfo.type === "DATEONLY" %}
                                 <th>
                                     <input name="{{ColumnName}}" type="date" class="form-control" autocomplete="off"
@@ -95,6 +78,15 @@
                                         {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
                                 </th>
                                 {% endif %}
+                                {% if ColumnInfo.type === "INTEGER" %}
+                                <th>
+                                    <input name="{{ColumnName}}" type="number" class="form-control" autocomplete="off"
+                                        list="{{ColumnInfo.HtmlTags.CreateInFooter.ListId}}"
+                                        {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
+                                        {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
+                                </th>
+                                {% endif %}
+
                                 {% endif %}
                                 {% endif %}
                                 {% endfor %}

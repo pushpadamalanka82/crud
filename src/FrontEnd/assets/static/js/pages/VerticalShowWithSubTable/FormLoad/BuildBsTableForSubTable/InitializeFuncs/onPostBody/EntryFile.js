@@ -2,19 +2,15 @@ import { StartFunc as SubTableFooterSaveButtonId } from "./SubTableFooterSaveBut
 
 const StartFunc = () => {
     SubTableFooterSaveButtonId();
-
-    // jFLocalSetfocus();
+    jFLocalSetFocusToFirstInput();
 };
 
-const jFLocalSetfocus = () => {
-    StartFuncTableFooterSaveButtonId();
+const jFLocalSetFocusToFirstInput = () => {
+    let jVarLocalTableName = jVarGlobalSubTableTagId;
+    let jVarLocalHtml = document.getElementById(jVarLocalTableName);
+    let jVarLocalTableFooter = jVarLocalHtml.querySelector("tfoot input");
+    jVarLocalTableFooter.focus();
 
-    const jVarLocalTableId = jVarGlobalTableTagId;
-    let jVarLocaTableHtml = document.getElementById(jVarLocalTableId);
-    let jVarLocalTableFooter = jVarLocaTableHtml.querySelector("tfoot");
-    let jVarLocalInput = jVarLocalTableFooter.querySelector("input[autofocus]");
-
-    jVarLocalInput.focus();
 };
 
 export { StartFunc };

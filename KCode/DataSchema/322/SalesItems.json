@@ -15,6 +15,9 @@
       },
       "SubTable": {
         "isShown": true
+      },
+      "CreateInFooter": {
+        "AutoFocusTag": "autofocus"
       }
     }
   },
@@ -35,6 +38,36 @@
     }
   },
   "ItemRate": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Name"
+      },
+      "Create": {
+        "title": "Item Name"
+      },
+      "SubTable": {
+        "isShown": true
+      }
+    }
+  },
+  "ItemQty": {
+    "type": "INTEGER",
+    "allowNull": false,
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Name"
+      },
+      "Create": {
+        "title": "Item Name"
+      },
+      "SubTable": {
+        "isShown": true
+      }
+    }
+  },
+  "ItemAmount": {
     "type": "INTEGER",
     "allowNull": false,
     "HtmlTags": {

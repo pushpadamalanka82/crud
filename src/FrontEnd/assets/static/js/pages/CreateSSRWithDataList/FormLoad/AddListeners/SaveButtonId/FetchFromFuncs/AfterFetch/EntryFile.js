@@ -6,8 +6,6 @@ let StartFunc = ({ inRowPk }) => {
     if (LocalFuncForSingleTable({ inRowPk: LocalRowPk }) === false) {
         LocalFuncForAllTables({ inRowPk: LocalRowPk });
     };
-
-    // window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
 };
 
 const LocalFuncForSingleTable = ({ inRowPk }) => {
@@ -17,6 +15,8 @@ const LocalFuncForSingleTable = ({ inRowPk }) => {
         window.location.href = `${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
         return true;
     };
+
+    return false;
 };
 
 const LocalFuncForAllTables = ({ inRowPk }) => {

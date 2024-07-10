@@ -7,6 +7,7 @@ let StartFunc = () => {
     };
 
 };
+
 const LocalFuncForSingleTable = () => {
     if (window.location.pathname.endsWith(`/${UrlJson.PresentUrl}`)) {
         let jVarLocalHref = `${UrlJson.RedirectToUrl}`;

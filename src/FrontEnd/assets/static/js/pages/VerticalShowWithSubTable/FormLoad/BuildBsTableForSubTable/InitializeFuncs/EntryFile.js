@@ -5,12 +5,6 @@ const StartFunc = async () => {
     let jVarLocalTableName = jVarGlobalSubTableTagId;
 
     var $table = $(`#${jVarLocalTableName}`);
-    // let jVarLocalColumnsData = await StartFuncForColumns();
-
-    // let jVarLocalColumnsForTable = [...jVarLocalColumnsData, {
-    //     field: "KS-Options",
-    //     title: "Options"
-    // }];
 
     $table.bootstrapTable({
         data: [],

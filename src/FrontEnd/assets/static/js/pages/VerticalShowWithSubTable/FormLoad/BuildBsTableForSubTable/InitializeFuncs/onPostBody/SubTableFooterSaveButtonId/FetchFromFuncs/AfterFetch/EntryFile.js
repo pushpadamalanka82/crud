@@ -1,5 +1,5 @@
 let StartFunc = () => {
-    let jVarLocalHtmlId = 'RefreshBSTableId';
+    let jVarLocalHtmlId = 'BsSubTableRefreshId';
     let jVarLocalRefreshBSTableId = document.getElementById(jVarLocalHtmlId);
     jVarLocalRefreshBSTableId.click();
 };
