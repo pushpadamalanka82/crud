@@ -43,6 +43,16 @@
                 "name": "TableFooterAdd",
                 "url": "TableFooterAdd.html",
                 "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Mobile",
+                "url": "CreateSSRMobile.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "MobileSubTable",
+                "url": "CreateSubTableMobile.html",
+                "icon": "bi bi-plus-circle"
             }
         ]
     },
