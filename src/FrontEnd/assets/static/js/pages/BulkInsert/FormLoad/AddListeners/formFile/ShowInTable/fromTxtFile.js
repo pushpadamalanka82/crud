@@ -1,6 +1,6 @@
 let StartFunc = ({ inData }) => {
     let jVarLocalData = inData;
-    let jVarLocalLines = jVarLocalData.split("\n");
+    let jVarLocalLines = jVarLocalData.split("\r\n");
     var $table = $('#table');
     let jVarLocalColumnsArray = $table.bootstrapTable('getVisibleColumns')
     let jVarLocalColumnNames = jVarLocalColumnsArray.map(element => {
@@ -17,7 +17,7 @@ let StartFunc = ({ inData }) => {
 
             console.log("LoopIndex : ", LoopIndex, jVarLocalColumnNames[1]);
 
-            jVarLoopInsideObject[jVarLocalColumnNames[LoopIndex + 1]] = element;
+            jVarLoopInsideObject[jVarLocalColumnNames[LoopIndex]] = element;
         });
 
         return jVarLoopInsideObject;
