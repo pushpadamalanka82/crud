@@ -1,5 +1,5 @@
 import ConfigJson from '../../../../../bin/Config.json' with {type: 'json'};
-import sideBarItems from '../../sideBarItems.json' with {type: 'json'};
+import sideBarItems from '../../sideBarItemsTally.json' with {type: 'json'};
 
 import { StartFunc as mainTableSchema } from "../mainTableSchema.js";
 import { StartFunc as mainTableColumnsConfig } from "../mainTableColumnsConfig.js";
