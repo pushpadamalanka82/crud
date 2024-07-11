@@ -5,11 +5,6 @@
         "icon": "bi bi-grid"
     },
     {
-        "name": "ShowFromJson",
-        "url": "ShowFromJson.html",
-        "icon": "bi bi-grid"
-    },
-    {
         "name": "CreateNew",
         "url": "CreateSSRMobile.html",
         "icon": "bi bi-grid"

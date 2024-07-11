@@ -9,9 +9,10 @@ let StartFunc = async () => {
     // let jVarLocalFetchHeaders = StartFuncFetchHeaders();
     let jVarLocalFetchUrl = `/${LocalroutePath}/${LocaltableName}/FilterData/RefPK/${jVarLocalinRowPk}`;
     let response = await fetch(jVarLocalFetchUrl);
-    let data = await response.json();
+    // console.log("response : ", response);
+    // let data = await response.json();
 
-    return await data;
+    return await response;
 };
 
 
