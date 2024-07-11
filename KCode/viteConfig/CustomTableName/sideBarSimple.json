@@ -23,12 +23,10 @@
         "name": "Delete",
         "url": "DeleteSSR.html",
         "icon": "bi bi-trash3"
-
     },
     {
         "name": "Insert",
         "url": "ShowBulkInsert.html",
-        "icon": "bi bi-textarea"
-        
+        "icon": "bi bi-trash3"
     }
 ]
