@@ -1,0 +1,39 @@
+:**: Creates :**:
+
+1. CreateClientSide  : The Html inputs created by Table Schema key With Using Template
+
+2. CreateSimple  : The Html inputs created by Table Schema key With out used input type
+
+3. CreateSSR     : The Html inputs created by Table Schema key With input type from schema 
+
+4. CreateWithSubTable : The Html inputs created by Table Schema key With input type And the Table Footer ipuputs create by Schama 
+
+5. CreateSSRWithDataList: The Html inputs created by Table Schema key With input type And With DataList list data 
+
+6. CreateSSRSimpleMobile : The Html inputs created by Table Schema key With type And Only visible main content in Mobile view 
+
+7. CreateSSRMobile : The Html inputs created by Table Schema key With type And DataList also Only visible main content in Mobile view 
+
+8. CreateSubTableMobile : The Html inputs created by Table Schema key With input type And the Table Footer inputs create by Schama only visible main content in mobile view
+
+9. ShowBulkInsert: In The html input asked json file then upload it, it'll upload bulk data in server
+
+:**: Delete :**:
+
+10. DeleteSimple  : The Table Columns Build by Server Data And The delete column Add by using BS Table colum method
+
+11. DeleteSSR  : The Table Columns Build by Server Data And The delete column Add by using Table colum method
+
+:**: Show :**:
+
+12. ShowClientSide: 
+
+13. ShowFromJson: The Table build by from data And Columns build by Bstable Column method From json .
+
+14. ShowSerialPage: The Table build by from data with Serial Number .
+
+15. ShowSimple: The Table build by from data And Columns bulid by data columns by using BStable colomn Method.
+
+16. ShowSimpleTB: The Table build by from data And Columns bulid by data columns by using BStable colomn Method. 
+
+17. ShowSSR: The Table build by from data And Columns . 
