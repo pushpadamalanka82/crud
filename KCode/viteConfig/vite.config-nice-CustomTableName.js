@@ -15,7 +15,7 @@ const SrcFolder = "src";
 // AllTables
 // FirstTable
 // <your table Name>
-const BuildType = "FriendNames";
+const BuildType = "CustomerNames";
 
 const FrontEndLastName = BuildType;
 
