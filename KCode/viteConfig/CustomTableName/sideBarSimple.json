@@ -28,5 +28,10 @@
         "name": "Insert",
         "url": "ShowBulkInsert.html",
         "icon": "bi bi-filetype-json"
+    },
+    {
+        "name": "BackUp",
+        "url": "../../utility/src/backup",
+        "icon": "bi bi-journal-plus"
     }
 ]
