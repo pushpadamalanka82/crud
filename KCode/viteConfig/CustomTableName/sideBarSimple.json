@@ -6,12 +6,12 @@
     },
     {
         "name": "Create New",
-        "url": "CreateSSR.html",
+        "url": "CreateSSRSimpleMobile.html",
         "icon": "bi bi-file-plus"
     },
     {
         "name": "ShowAll",
-        "url": "ShowSSR.html",
+        "url": "ShowSSRMobile.html",
         "icon": "bi bi-window-plus"
     },
     {
@@ -27,6 +27,6 @@
     {
         "name": "Insert",
         "url": "ShowBulkInsert.html",
-        "icon": "bi bi-trash3"
+        "icon": "bi bi-journal-plus"
     }
 ]
